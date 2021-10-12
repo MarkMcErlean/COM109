@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>All Elements</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../stylesheets/stylesheet.css">
+	<link rel="stylesheet" href="../stylesheets/AllElementStylesheet.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <!--   Comment to break up head and body   -->
@@ -132,7 +132,136 @@
 	<p><strong>Note:</strong>These tags are often used to represent a fragment of computer code</p>
 <hr>
 	<p><a href="https://scm.ulster.ac.uk/">School Web Site</a></p>
-
+	<p><a href="#top"><img src="adv_CSS.png" style="vertical-align: top;" width="200" height="200" alt=""></p>
+	<p><a href="https://www.google.com/"></a></p>
+<hr>
+	<p><a href="#top">Jump to top of the page</a></p>
+<hr>
+	<h2>HTML Table (Default Style)</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>No.</th>
+				<th>Name</th>
+				<th>Age</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Peter Parker</td>
+				<td>16</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Clark Kent</td>
+				<td>34</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Harry Potter</td>
+				<td>11</td>
+			</tr>
+		</tbody>
+	</table>
+<hr>
+	<div style="color:green; font-size:18px;">This is some text.</div>
+<hr>
+	<p><span id="greet"></span></p>
+	<script>
+		document.getElementById("greet").innerHTML = "Hello World!";
+	</script>
+	<noscript>
+		<p>Sorry, your browser does not support JavaScript!</p>
+	</noscript>
+<hr>
+	<form>
+		<label>First Name: <input type="text" id="firstName"></label>
+		<button type="button" class="btn save"><i class="fa fa-home"></i>Save Name</button>
+		<button type="button" class="btn btn-success btn-lg access">Show my name</button>
+		<button type="button" class="btn btn-success btn-lg">Search</button>
+	</form>
+<hr>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-4">
+			<h3>Column 1</h3>
+			<p>Lorem ipsum dolor..</p>
+		</div>
+		<div class="col-sm-4">
+			<h3>Column 2</h3>
+			<p>Lorem ipsum dolor..</p>
+		</div>
+		<div class="col-sm-4">
+			<h3>column 3</h3>
+			<p>Lorem upsum dolor..</p>
+		</div>
+	</div>
+</div>
+<hr>
 </article>
+<footer id="end" style="text-align: center;">
+	<address>
+		Written by <a href="mailto:mcerlean-m5@ulster.ac.uk">Mark McErlean</a>.<br>
+		Contact me at:<br>
+		<del>redacted</del>
+	</address>
+</footer>
+<hr>
+<p>
+	<a href="http://jigsaw.w3.org/css-validator/check/referer">
+		<img sty;e="border:0;width:88px;height:31px"
+		src="http://jigsaw.w3.org/css-validator/images/vcss"
+		alt="Valid CSS!">
+	</a>
+</p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://stackpath.bootsrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script>
+	// Check if the local storage object exists
+	if(localStorage){
+		$(document.ready(function(){
+			$(".save").click(function(){
+				//Get input name
+				var firstName=$("first_name").val();
+
+				//store data
+				localStorage.setItem("first_name", firstName);
+				alert("Your first naem is saved.");
+
+			});
+			$(".access").click(function(){
+				// Retrieve data
+				alert("Hi, "+ localStorage.getItem("first_name"));
+			});
+		}));
+	} else {
+		alert("Sorry, your browser does not support local storage.");
+	}
+		$(document).ready(function(){
+			// Add smooth scrolling to all links
+			$("a").on('click', function(event){
+
+				// Make sure this. hash has a value before overriding default behavior
+				if(this.has !==""){
+					//Prevent default anchor click behavior
+					event.preventDefault();
+
+					//store hash
+					var hash = this.hash;
+
+					//Using jQuery's animate() method to add smooth page scroll
+					// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified location
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 2800, function(){
+
+						// Add hash # to URL when done scrolling (default click behaviour)
+						window.location.hash = hash;
+					});
+				} // End if
+			});
+		});
+</script>
 </body>
 </html>
