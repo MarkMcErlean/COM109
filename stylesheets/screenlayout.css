@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+body{
+font-family:'lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: 62.5%;
+color: #000000;
+background-color:  #A1A1A1;
+background-image: url(images/body_bg.png); /*find an image to put here*/
+background-repeat: repeat-x;
+border-top: 5px solid #241F1C;
+margin: 0; /*This is so the bordre-top sits tight to the top of the page */
+}
+
+/* Layout */
+
+#container{
+width: 550px;
+margin: 0 auto;
+background-color: #25201C;
+border-bottom: 5px solid #241F1C;
+}
+
+#header{
+text-align:center;
+background-color: #E1E1E1;
+padding-top: 40px;
+padding-bottom: 20px;
+}
+
+#content{
+padding: 10px 20px;
+}
+
+#footer{
+padding:40px 0;
+font-size: 11px;
+line-height: 0.5em;
+text-align: center;
+color: #383330;
+background-color: #A1A1A1;
+}
+
+img{
+border: 0;
+}
+
+.portrait{
+margin:10px 0;
+padding: 4px;
+border: 1px solid #FFF7D7;
+}
+
+/* Typography */
+
+h1, h2, h3, h4
+{
+font-weight: normal;
+color: #9CC4E5;
+}
+
+h1
+{
+font-size: 3em;
+font-family:Georgia, sans-serif;
+text-transform: uppercase;
+letter-spacing:0.075em;
+}
+
+h2
+{
+font-size:2.4em;
+
+}
+h3
+{
+font-size: 1.8em;
+
+}
+
+h4 
+{
+font-size: 1.4em;
+text-transform: uppercase;
+letter-spacing: 0.4em;
+margin-top: 40px;
+padding-top: 20px;
+border-top: solid 1px #E0DFDA;
+}
+
+p
+{
+line-height: 1.6;
+}
+
+blockquote
+{
+font-family: georgia, sans-serif;
+font-size: 18px;
+font-style: italic;
+letter-spacing: 0.1em;
+margin-left: 40px;
+padding: 0 20px;
+border-left: 10px solid #E0DFDA;
+}
+
+.primate{
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/*Links*/
+
+a{
+color: #9CC4E5;
+text-decoration: none;
+line-height: 1.5;
+}
+
+a:link{
+border-bottom:1px solid #9CC4E5;
+}
+
+a:visited{
+color: #E0DFDA;
+border-bottom: 1px dotted #E0DFDA;
+}
+
+a:hover{
+color: #26201C;
+background-color: #E0DFDA;
+border-bottom: none;
+}
+
+a:active, a:focus{
+color: #26201C;
+background-color: #9CC4E5;
+border-bottom: none;
+}
+
+/* The following rule trgets the links in the footer */
+
+#footer a:link, #footer a:visited{
+color: #383330;
+border-bottom: solid 1px #383338;
+}
+
+pre{
+color:#FFF;
+background-color: #3e3f40;
+width: 400px;
+border:groove;
+background-image:url(image/link_image.png);
+background-repeat: no-repeat;
+}
